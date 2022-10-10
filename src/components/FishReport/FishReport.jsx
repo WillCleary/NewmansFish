@@ -1,5 +1,8 @@
 import FishReportTable from 'components/FishReportTable/FishReportTable';
 import './FishReport.module.css';
+import { Fragment } from 'react';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 import { useQuery, gql } from "@apollo/client";
 import moment from 'moment';
 
@@ -47,28 +50,32 @@ export default function FishReport() {
   const reportDisplayDate = moment(report_date).format('MM/DD/YYYY, ddd')
 
   return (
-    <div id="wholesale">
-      <div id="content" role="main" className="clearfix">
-        <div id="wholesale-wrap">
-          <div id="wholesale-border">
-            <header className="clearfix">
-              <h2>Daily Fresh Fish Report</h2>
-              <div id="wholesale-header-right">
-                <p className="wholesale-date">Date: {reportDisplayDate}<br />
-                  Phone Orders: 503-286-5950
-                </p>
-                <br />
-                <p className='wholesale-date'>
-                  {header}
-                </p>
+    <Fragment>
+      <Header />
+      <div id="wholesale">
+        <div id="content" role="main" className="clearfix">
+          <div id="wholesale-wrap">
+            <div id="wholesale-border">
+              <header className="clearfix">
+                <h2>Daily Fresh Fish Report</h2>
+                <div id="wholesale-header-right">
+                  <p className="wholesale-date">Date: {reportDisplayDate}<br />
+                    Phone Orders: 503-286-5950
+                  </p>
+                  <br />
+                  <p className='wholesale-date'>
+                    {header}
+                  </p>
 
-              </div>
-            </header>
-            <br data-clear="all" />
-            <FishReportTable report_groups={report_groups} />
+                </div>
+              </header>
+              <br data-clear="all" />
+              <FishReportTable report_groups={report_groups} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </Fragment>
   )
 }

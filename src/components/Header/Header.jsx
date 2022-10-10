@@ -70,7 +70,7 @@ const Header = () => (
           </li>
           <li className="n-seafood"><a href="http://newmansfish.com/seafood"></a>
           </li>
-          
+
           <li className="logo"><a href="http://newmansfish.com/home">Newman&apos;s Fish Company Inc.</a></li>
           <li className="text-right n-restaurant"><a href="http://newmansfish.com/restaurants"></a>
           </li>
