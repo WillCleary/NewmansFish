@@ -10,7 +10,7 @@
     z-index: 99;
 }
 
-.logo {
+#header.logo {
     text-align: center;
     margin: 0;
     position: absolute;

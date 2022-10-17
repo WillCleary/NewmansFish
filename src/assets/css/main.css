@@ -223,11 +223,6 @@ textarea {
 	color: #003333;
 }
 
-#nav li.logo a {
-	width: 249px;
-	background: transparent url('/src/assets/img/logo.png') no-repeat left top;
-	text-indent: -99999em;
-}
 
 /*
 .n-wholesale:hover, .n-wholesale.active {
